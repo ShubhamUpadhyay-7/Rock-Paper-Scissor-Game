@@ -1,0 +1,505 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #8CC461;
+    position: relative;
+}
+
+.scoreboard {
+    display: flex;
+    width: 55vw;
+    height: 22vh;
+    border-radius: 1vw;
+    border-color: #FFFFFF;
+    border-width: 0.3vh;
+    border-style: solid;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gamename {
+    font-family: Roboto;
+    color: #FFFFFF;
+    font-size: 5vh;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    width: 62%;
+}
+
+.gamename p {
+    margin: 0;
+    padding: 0;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    letter-spacing: 0.27vw;
+}
+
+.computerscore,
+.yourscore {
+    background-color: #FFFFFF;
+    height: 17vh;
+    width: 8vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 0.5vw;
+    margin-left: 3%;
+}
+
+.computerscore p {
+    width: 70%;
+    color: #656565;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 600;
+    font-family: Roboto;
+    letter-spacing: 0.1vw;
+}
+
+.yourscore p {
+    width: 60%;
+    color: #656565;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 600;
+    font-family: Roboto;
+    letter-spacing: 0.1vw;
+}
+
+.triangle {
+    margin-top: 10vh;
+    position: relative;
+    height: 40vh;
+    width: 100%;
+}
+
+.rock,
+.paper,
+.scissor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 3px 0px 21px 1px #00000033 inset;
+}
+
+.rock {
+    border: 16px solid #0074B6;
+    position: absolute;
+    left: 40%;
+}
+
+.scissor {
+    border: 16px solid #BD00FF;
+    position: absolute;
+    top: 0%;
+    left: 55%;
+}
+
+.paper {
+    border: 16px solid #FFA943;
+    position: absolute;
+    top: 60%;
+    left: 47.5%;
+}
+
+.line1 {
+    border: 10px solid #000000A3;
+    position: absolute;
+    top: 55px;
+    width: 15%;
+    left: 43%;
+    z-index: -1;
+    transform: rotate(0deg);
+    transform-origin: 0%;
+}
+
+.line2 {
+    border: 10px solid #000000A3;
+    position: absolute;
+    top: 55px;
+    width: 15%;
+    left: 43%;
+    z-index: -1;
+    transform: rotate(60deg);
+    transform-origin: 0%;
+}
+
+.line3 {
+    border: 10px solid #000000A3;
+    position: absolute;
+    top: 55px;
+    width: 15%;
+    left: 43%;
+    z-index: -1;
+    transform: rotate(-60deg);
+    transform-origin: 100%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 85%;
+    justify-content: space-between;
+}
+
+.Rules p,
+.Next p {
+    font-family: Roboto;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 24.61px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-top: 10px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    height: 35px;
+    width: 130px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.rulesbox {
+    background-color: #004429;
+    color: #FFFFFF;
+    width: 278px;
+    height: 325px;
+    border: 7px solid #FFFFFF;
+    border-radius: 13px;
+    position: absolute;
+    top: 35vh;
+    left: 78vw;
+}
+
+.rulesbox h1 {
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 29px;
+}
+
+.rulesbox ul>li {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15.23px;
+    margin-top: 18px;
+    padding-right: 4px;
+    list-style: none;
+}
+
+.rulesbox ul>li {
+    position: relative;
+    padding-left: 15px;
+}
+
+.rulesbox ul>li::before {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: yellow;
+    display: inline-block;
+    content: '';
+    top: 50%;
+    left: -8px;
+    transform: translateY(-50%);
+}
+
+.close {
+    position: absolute;
+    top: -10%;
+    left: 90%;
+    height: 50px;
+    width: 50px;
+    background-color: #FF0000;
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close p {
+    font-family: Dangrek;
+    font-size: 44px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.game-container {
+    height: 40vh;
+    width: 60vw;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.choice-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.rock1,
+.scissors1,
+.paper1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 3px 0px 21px 1px #00000033 inset;
+    position: relative;
+}
+
+.rock1 {
+    border: 16px solid #0074B6;
+}
+
+.scissors1 {
+    border: 16px solid #BD00FF;
+}
+
+.paper1 {
+    border: 16px solid #FFA943;
+}
+
+.you-picked,
+.pc-picked {
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: larger;
+    font-family: Roboto;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: -15vh;
+}
+
+#play-again,
+#play-again1 {
+    width: 10vw;
+    height: 5vh;
+    border-radius: 0.4vw;
+    font-family: Roboto;
+    border: none;
+    font-weight: 600;
+    font-size: medium;
+    color: #6B6B6B;
+    letter-spacing: 0.1em;
+    margin-top: -1%;
+}
+
+#result-text {
+    font-family: Roboto;
+    font-size: 39px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+}
+
+.pc {
+    margin-top: -3.5%;
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+}
+
+#comscore,
+#perscore {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 60px;
+    margin-top: -8%;
+    color: #252525;
+}
+
+.Rules1 p {
+    font-family: Roboto;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 24.61px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-top: 10px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    height: 35px;
+    width: 130px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.imgs {
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+}
+
+.imgs9 {
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.imgs1 {
+    position: absolute;
+    left: 35%;
+    top: 35%;
+}
+
+.imgs6 {
+    position: absolute;
+    left: 58%;
+    top: 45%;
+}
+
+.imgs2 {
+    position: absolute;
+    left: 53%;
+    top: 17%;
+}
+
+.imgs8 {
+    position: absolute;
+    left: 39%;
+    top: 27%;
+}
+
+.imgs3 {
+    position: absolute;
+    left: 41.5%;
+    top: 20%;
+}
+
+.imgs4 {
+    position: absolute;
+    left: 47%;
+    top: 26%;
+}
+
+.imgs7 {
+    position: absolute;
+    left: 61%;
+    top: 32%;
+}
+
+.imgs5 {
+    position: absolute;
+    left: 40%;
+    top: 62%;
+}
+
+.msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -12%;
+    font-family: Roboto;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-align: center;
+}
+
+.msg1 {
+    font-size: 91px;
+    line-height: 106.64px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.msg2 {
+    font-size: 41px;
+    line-height: 48.05px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: -4%;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.Rules1 {
+    display: flex;
+    justify-content: end;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+/* .winner-circle {
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px darkgreen;
+    }
+
+    33% {
+        box-shadow: 0 0 60px darkgreen;
+    }
+
+    66% {
+        box-shadow: 0 0 120px darkgreen;
+    }
+
+    100% {
+        box-shadow: 0 0 240px darkgreen;
+    }
+} */
+
+.winner-circle {
+    animation: pulse 1s steps(2, end) infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 50px darkgreen;
+    }
+
+    25% {
+        box-shadow: 0 0 0px darkgreen;
+    }
+
+    50% {
+        box-shadow: 0 0 50px darkgreen;
+    }
+
+    75% {
+        box-shadow: 0 0 0px darkgreen;
+    }
+
+    100% {
+        box-shadow: 0 0 50px darkgreen;
+    }
+}

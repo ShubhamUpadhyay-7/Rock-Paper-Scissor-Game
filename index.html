@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper and Scissor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dangrek&display=swap">
+</head>
+
+<body>
+    <div class="scoreboard">
+        <div class="gamename">
+            <p>ROCK</p>
+            <p>PAPER</p>
+            <p>SCISSORS</p>
+        </div>
+        <div class="computerscore">
+            <p>COMPUTER SCORE</p>
+            <p id="comscore"></p>
+        </div>
+        <div class="yourscore">
+            <p>YOUR SCORE</p>
+            <p id="perscore"></p>
+        </div>
+    </div>
+    <div class="triangle">
+        <div class="rock choice" id="rock">
+            <img src="images/icons8-fist-67 1.png">
+        </div>
+        <div class="scissor choice" id="scissors">
+            <img src="images/17911 1.png">
+        </div>
+        <div class="paper choice" id="paper">
+            <img src="images/icons8-hand-64 1.png">
+        </div>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div>
+    <div class="game-container hidden">
+        <div class="choice-container">
+            <div class="you-picked">
+                <p>YOU PICKED</p>
+                <div id="user-choice"></div>
+            </div>
+            <div class="pc-picked">
+                <p>PC PICKED</p>
+                <div id="pc-choice"></div>
+            </div>
+        </div>
+        <div class="result-container">
+            <p id="result-text"></p>
+            <p class="pc hidden">AGAINST PC</p>
+            <button id="play-again">PLAY AGAIN</button>
+        </div>
+    </div>
+    <div class="buttons">
+        <div class="Rules" onclick="toggleRules()">
+            <p>RULES</p>
+        </div>
+        <div class="Next hidden" onclick="evaluateScore()">
+            <p>NEXT</p>
+        </div>
+    </div>
+    <div class="rulesbox hidden">
+        <h1>Game Rules</h1>
+        <ul>
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+                scissors.”</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li>If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+        <div class="close" onclick="toggleRules()">
+            <p>x</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
