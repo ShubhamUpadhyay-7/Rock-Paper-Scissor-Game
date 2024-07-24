@@ -114,5 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
     playAgainButton.addEventListener('click', () => {
         gameContainer.classList.add('hidden');
         triangle.classList.remove('hidden');
+        nextButton.classList.add('hidden');
     })
 })
